@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>byuegv's blog</title>
+	<meta name="description" content="">
+	<meta name="author" content="byuegv">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="https://byuegv.github.io/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="https://byuegv.github.io/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/local.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+	<link href="https://byuegv.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="byuegv's blog Atom Feed" />
+
+
+	<link href="https://byuegv.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="byuegv's blog RSS Feed" />
+
+
+<script>var _gaq=[['_setAccount','UA-116910702-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</head>
+<body>
+<a href="https://github.com/byuegv"><img style="position: absolute; top: 39px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="https://byuegv.github.io/">byuegv's blog</a>
+			<ul class="nav">
+					<li class="active"><a href="https://byuegv.github.io/category/bash.html">Bash</a></li>
+					<li ><a href="https://byuegv.github.io/category/configure.html">Configure</a></li>
+					<li ><a href="https://byuegv.github.io/category/markdown.html">Markdown</a></li>
+					<li ><a href="https://byuegv.github.io/category/python.html">Python</a></li>
+			</ul>
+			<p class="pull-right"><a href="https://byuegv.github.io/archives.html">[archives]</a> <a href="https://byuegv.github.io/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="https://github.com/byuegv">github</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>常用bash命令 - 1</h1></div>
+		<div class="well small">Permalink: <a class="more" href="https://byuegv.github.io/bashCmd-1.html">2018-03-15 10:53:00+08:00</a>
+by <a class="url fn" href="https://byuegv.github.io/author/byuegv.html">byuegv </a>
+ in <a href="https://byuegv.github.io/category/bash.html">Bash</a>
+tags: <a href="https://byuegv.github.io/tag/bash.html">bash</a> </div>
+		<div><h1>常用bash命令-1</h1>
+<p>[TOC]
+<strong>Note:bash cmd支持的通配符位* [] ?</strong></p>
+<ol>
+<li>ln 链接文件或目录 <br>
+    &gt; 硬链接：引用文件在文件系统中的物理索引(inode)，移动或删除原文件硬链接不会被破坏，当 
+    &gt; 对文件的索引都被删除，即硬链接数为0时文件被删除。只能用于同种文件系统。<br>
+    &gt; 软链接：符号链接，删除软链接不会删除文件本身。可以用于不同的文件系统。</li>
+</ol>
+<div class="highlight"><pre><span></span>ln -s src dit <span class="c1">#创建一个软链接</span>
+ln src dit <span class="c1">#创建一个硬链接</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>chown 修改权限     <br>
+    &gt; u:user g:group o:other a:all 
+    &gt; +:add -:unset r:4 w:2 x:1</p>
+</li>
+<li>
+<p>chown chgrp 修改文件所有者和用户组    <br>
+    &gt; chown [option] [owner]:[group] file..
+    &gt; chgrp [option] group file..</p>
+</li>
+<li>setuid setgid 设置用户和权限位     <br>
+    &gt; 设置了权限位则运行任何人以文件所属用户或用户组的权限执行改文件 <br>
+    &gt; chown u+s file or chown 4744 file or chown 2755 file or chown 0733 file <br>
+    &gt; 进行设置或取消权限位      <br>
+    &gt; <code>stat file</code> 查看文件信息        </li>
+</ol>
+<h4>personal information</h4>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Blog: <a href="https://byuegv.github.io" title="byuegv's blog">github-blog</a></li>
+</ul></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; byuegv</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

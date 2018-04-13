@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>byuegv's blog - Markdown</title><link href="https://byuegv.github.io/" rel="alternate"></link><link href="https://byuegv.github.io/feeds/markdown.atom.xml" rel="self"></link><id>https://byuegv.github.io/</id><updated>2018-04-07T23:00:00+08:00</updated><entry><title>Latex In Markdonw</title><link href="https://byuegv.github.io/markdown-1.html" rel="alternate"></link><published>2018-04-07T17:53:00+08:00</published><updated>2018-04-07T23:00:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-04-07:/markdown-1.html</id><summary type="html">&lt;p&gt;Latex In Markdown 包含常用数学符号，集合，矩阵等&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Latex In Markdown&lt;/h1&gt;
+&lt;h2&gt;Start&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行内公式 &lt;span class="math"&gt;\(\sum_{i=1}^{n}\frac{1}{i^2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;独立公式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;$$\sum_{i=1}^{n}\frac{1}{i^2}$$&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Latex中的特殊字符&lt;code&gt;$ % &amp;amp; ~ _ ^ \ {}&lt;/code&gt;使用时需要转移&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;希腊字母表&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\alpha&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\beta&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\gamma&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Gamma&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\delta&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Delta&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\epsilon&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\varepsilon&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\zeta&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\eta&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\theta&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Theta&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\vartheta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\vartheta&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\iota\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\iota&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\lambda&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Lambda&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\mu&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\nu&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Xi&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\pi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Pi&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\kappa&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(o\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\varpi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\varpi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\tau&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\rho&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\varrho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\varrho&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\sigma&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Sigma&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\varsigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\varsigma&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Upsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Upsilon&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\phi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Phi&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\varphi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\varphi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\upsilon&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\chi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\psi&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\omega&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Omega&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Psi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;上下标&lt;/h2&gt;
+&lt;p&gt;上标：&lt;code&gt;^&lt;/code&gt; eg:&lt;code&gt;i^2&lt;/code&gt;&lt;span class="math"&gt;\(i^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下标： &lt;code&gt;_&lt;/code&gt; eg:&lt;code&gt;a_{i,j}&lt;/code&gt;&lt;span class="math"&gt;\(a_{i,j}\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;常用数学公式符号&lt;/h2&gt;
+&lt;h3&gt;分数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\frac{1}{k^2}  \dfrac{1}{k^2} \tfrac{1}{k^2}&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{1}{k^2} \;\dfrac{1}{k^2} \;\tfrac{1}{k^2}$$&lt;/div&gt;
+&lt;h3&gt;开方&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\sqrt[n]{expr}&lt;/code&gt; n默认为2&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\sqrt{x}\;\sqrt[3]{x+y}\;\sqrt[5]{x^{x^{x^{2}}}}&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\sqrt{x}\;\sqrt[3]{x+y}\;\sqrt[5]{x^{x^{x^{2}}}}$$&lt;/div&gt;
+&lt;h3&gt;其他运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;$$\sum\;\prod\;\lim\;\int\;\iiint\;\idotsint\;$$&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\sum\;\prod\;\lim\;\int\;\iiint\;\idotsint\;$$&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;+ - * / 可以直接输入，特殊运算符如下&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$ \pm\; \times\; \div\; \cdot\; \cap\; \cup\; \geq\; \leq\; \neq\; \approx\; \equiv $$&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$ \pm\; \times\; \div\; \cdot\; \cap\; \cup\; \geq\; \leq\; \neq\; \approx\; \equiv $$&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;x\to0&lt;/code&gt; &lt;span class="math"&gt;\(x\to0\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;箭头表示&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\leftarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\leftarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\rightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\rightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Leftarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Leftarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Rightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Rightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\longleftarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\longleftarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\longrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\longrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Longleftarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Longleftarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Longrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Longrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\leftrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\leftrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Leftrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Leftrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\longleftrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\longleftrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\Longleftrightarrow\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\Longleftrightarrow&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\xleftarrow{x+y}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xleftarrow{x+y}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\xrightarrow[i^2]{x+y+z}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\xrightarrow[i^2]{x+y+z}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;省略号&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\dots\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\dots&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\cdots\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\cdots&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\vdots&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\ddots\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\ddots&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;空白间距&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;\, 3/18em   \:  4/18em  \; 5/18em \quad 1em \qquad 2m \! -3/18em&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;表示方法&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;function&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;th&gt;example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;向量&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\vec{}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\vec{AB}\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;强制上下限在上下两侧&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\limits&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\sum\limits_{i=0}^{n}i^2\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;强制上下限在右侧&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\nolimits&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\sum\nolimits_{i=0}^{n}i^2\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上划线&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\overline&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\overline{x+y}\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;下划线&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\underline&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\underline{x+y}\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上括弧&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\overbrace&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\overbrace{x{\dots}x}^{n个x}\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;下括弧&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\underbrace&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\underbrace{x{\dots}x}_{n个x}\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;矩阵&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;array&lt;span class="nb"&gt;}{&lt;/span&gt;ccc&lt;span class="nb"&gt;}&lt;/span&gt;
+x&lt;span class="nb"&gt;_&lt;/span&gt;1 &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; x&lt;span class="nb"&gt;_&lt;/span&gt;2 &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;\dots&lt;/span&gt; &lt;span class="k"&gt;\\&lt;/span&gt;
+x&lt;span class="nb"&gt;_&lt;/span&gt;3 &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; x&lt;span class="nb"&gt;_&lt;/span&gt; 4&lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;\dots&lt;/span&gt; &lt;span class="k"&gt;\\&lt;/span&gt;
+&lt;span class="k"&gt;\vdots&lt;/span&gt; &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;\vdots&lt;/span&gt; &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;\ddots&lt;/span&gt;
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;array&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="math"&gt;$$\begin{array}{ccc} x_1 &amp;amp; x_2 &amp;amp; \dots \\x_3 &amp;amp; x_ 4&amp;amp; \dots \\\vdots &amp;amp; \vdots &amp;amp; \ddots\end{array}$$&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;pmatrix&lt;span class="nb"&gt;}&lt;/span&gt; a &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; b&lt;span class="k"&gt;\\&lt;/span&gt; c &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; d &lt;span class="k"&gt;\\&lt;/span&gt; &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;pmatrix&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\quad&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;bmatrix&lt;span class="nb"&gt;}&lt;/span&gt; a &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; b &lt;span class="k"&gt;\\&lt;/span&gt; c &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; d &lt;span class="k"&gt;\\&lt;/span&gt; &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;bmatrix&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\quad&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Bmatrix&lt;span class="nb"&gt;}&lt;/span&gt; a &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; b &lt;span class="k"&gt;\\&lt;/span&gt; c &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; d&lt;span class="k"&gt;\\&lt;/span&gt; &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Bmatrix&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\quad&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;vmatrix&lt;span class="nb"&gt;}&lt;/span&gt; a &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; b &lt;span class="k"&gt;\\&lt;/span&gt; c &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; d &lt;span class="k"&gt;\\&lt;/span&gt; &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;vmatrix&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\quad&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Vmatrix&lt;span class="nb"&gt;}&lt;/span&gt; a &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; b&lt;span class="k"&gt;\\&lt;/span&gt; c &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; d &lt;span class="k"&gt;\\&lt;/span&gt; &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Vmatrix&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="math"&gt;$$\begin{Vmatrix} a &amp;amp; b\\ c &amp;amp; d \\ \end{Vmatrix} \quad\begin{bmatrix} a &amp;amp; b \\ c &amp;amp; d \\ \end{bmatrix}\quad \begin{Bmatrix} a &amp;amp; b \\ c &amp;amp; d\\ \end{Bmatrix}\quad \begin{vmatrix} a &amp;amp; b \\ c &amp;amp; d \\ \end{vmatrix}\quad\begin{Vmatrix} a &amp;amp; b\\ c &amp;amp; d \\ \end{Vmatrix} $$&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;$ (\begin{smallmatrix} a &amp;amp; b \\ c &amp;amp; d \end{smallmatrix}) $&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;small matrix $ (&lt;/p&gt;
+&lt;div class="math"&gt;\begin{smallmatrix} a &amp;amp; b \\ c &amp;amp; d \end{smallmatrix}&lt;/div&gt;
+&lt;p&gt;) $&lt;/p&gt;
+&lt;h2&gt;公式组和长公式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;长公式无需 对齐使用&lt;code&gt;multline&lt;/code&gt;需要对齐使用&lt;code&gt;split&lt;/code&gt;使用&lt;code&gt;\\和&amp;amp;&lt;/code&gt;来分行和对齐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不对齐&lt;code&gt;$$\begin{multline}x=a+b+c \\ d+e+f+g \end{multline} $$&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{multline}x=a+b+c \\ d+e+f+g \end{multline} $$&lt;/div&gt;
+&lt;p&gt;对齐&lt;code&gt;$$\begin{split}x=&amp;amp;a+b+c \\ &amp;amp;d+e+f+g \end{split} $$&lt;/code&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{split}x=&amp;amp;a+b+c \\ &amp;amp;d+e+f+g \end{split} $$&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;公式组不需要对齐使用&lt;code&gt;gather&lt;/code&gt;需要对齐使用&lt;code&gt;align&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不对齐&lt;code&gt;$$\begin{gather}a=b+c+d\\x=y+z \end{gather}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;$$\begin{gather}a=b+c+d\\x=y+z \end{gather}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;对齐&lt;code&gt;$$\begin{align}&amp;amp;a=b+c+d\\&amp;amp;x=y+z \end{align}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;$$\begin{align}&amp;amp;a=b+c+d\\&amp;amp;x=y+z \end{align}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分支公式使用&lt;code&gt;cases&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$y=\begin{cases}-x,\;x\leq 0\\ x,\; x\gt 0\end{cases}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;$$y=\begin{cases}-x,\;&amp;amp;x\leq 0\\ x,\; &amp;amp;x\gt 0\end{cases}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;集合&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;\{|...\}&lt;/code&gt; &lt;span class="math"&gt;\(\{|...\}\)&lt;/span&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;symbol&lt;/th&gt;
+&lt;th&gt;syntax&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\in\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\in&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\({\not \in}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{\not \in}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\subset}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\subset}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\not \subset}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\not \subset}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\subsetneqq}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\subseteqq}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\supsetneqq}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\supseteqq}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\cap}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\cap}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(A{\cup}B\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A{\cup}B&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\({\overline{A}}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{\overline{A}}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\emptyset\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\emptyset&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(\mathbb{R}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\mathbb{R}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Reference&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.cnblogs.com/peaceWang/p/Markdown-tian-jia-Latex-shu-xue-gong-shi.html"&gt;Markdown 添加 Latex 数学公式&lt;/a&gt; 
+&lt;a href="https://blog.csdn.net/u014630987/article/details/70156489"&gt;Markdown中Latex 数学公式基本语法&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;personal information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io" title="byuegv's blog"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="markdown"></category><category term="latex"></category></entry></feed>

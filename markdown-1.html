@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>byuegv's blog</title>
+	<meta name="description" content="">
+	<meta name="author" content="byuegv">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="https://byuegv.github.io/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="https://byuegv.github.io/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/local.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+	<link href="https://byuegv.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="byuegv's blog Atom Feed" />
+
+
+	<link href="https://byuegv.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="byuegv's blog RSS Feed" />
+
+
+<script>var _gaq=[['_setAccount','UA-116910702-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</head>
+<body>
+<a href="https://github.com/byuegv"><img style="position: absolute; top: 39px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="https://byuegv.github.io/">byuegv's blog</a>
+			<ul class="nav">
+					<li ><a href="https://byuegv.github.io/category/bash.html">Bash</a></li>
+					<li ><a href="https://byuegv.github.io/category/configure.html">Configure</a></li>
+					<li class="active"><a href="https://byuegv.github.io/category/markdown.html">Markdown</a></li>
+					<li ><a href="https://byuegv.github.io/category/python.html">Python</a></li>
+			</ul>
+			<p class="pull-right"><a href="https://byuegv.github.io/archives.html">[archives]</a> <a href="https://byuegv.github.io/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="https://github.com/byuegv">github</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>Latex In Markdonw</h1></div>
+		<div class="well small">Permalink: <a class="more" href="https://byuegv.github.io/markdown-1.html">2018-04-07 17:53:00+08:00</a>
+by <a class="url fn" href="https://byuegv.github.io/author/byuegv.html">byuegv </a>
+ in <a href="https://byuegv.github.io/category/markdown.html">Markdown</a>
+tags: <a href="https://byuegv.github.io/tag/markdown.html">markdown</a> <a href="https://byuegv.github.io/tag/latex.html">latex</a> </div>
+		<div><h1>Latex In Markdown</h1>
+<h2>Start</h2>
+<ul>
+<li>
+<p>行内公式 <span class="math">\(\sum_{i=1}^{n}\frac{1}{i^2}\)</span></p>
+</li>
+<li>
+<p>独立公式</p>
+</li>
+</ul>
+<div class="math">$$\sum_{i=1}^{n}\frac{1}{i^2}$$</div>
+<ul>
+<li>Latex中的特殊字符<code>$ % &amp; ~ _ ^ \ {}</code>使用时需要转移</li>
+</ul>
+<h2>希腊字母表</h2>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>syntax</th>
+<th>symbol</th>
+<th>syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math">\(\alpha\)</span></td>
+<td><code>\alpha</code></td>
+<td><span class="math">\(\beta\)</span></td>
+<td><code>\beta</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\gamma\)</span></td>
+<td><code>\gamma</code></td>
+<td><span class="math">\(\Gamma\)</span></td>
+<td><code>\Gamma</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\delta\)</span></td>
+<td><code>\delta</code></td>
+<td><span class="math">\(\Delta\)</span></td>
+<td><code>\Delta</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\epsilon\)</span></td>
+<td><code>\epsilon</code></td>
+<td><span class="math">\(\varepsilon\)</span></td>
+<td><code>\varepsilon</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\zeta\)</span></td>
+<td><code>\zeta</code></td>
+<td><span class="math">\(\eta\)</span></td>
+<td><code>\eta</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\theta\)</span></td>
+<td><code>\theta</code></td>
+<td><span class="math">\(\Theta\)</span></td>
+<td><code>\Theta</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\vartheta\)</span></td>
+<td><code>\vartheta</code></td>
+<td><span class="math">\(\iota\)</span></td>
+<td><code>\iota</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\lambda\)</span></td>
+<td><code>\lambda</code></td>
+<td><span class="math">\(\Lambda\)</span></td>
+<td><code>\Lambda</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\mu\)</span></td>
+<td><code>\mu</code></td>
+<td><span class="math">\(\nu\)</span></td>
+<td><code>\nu</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\xi\)</span></td>
+<td><code>\xi</code></td>
+<td><span class="math">\(\Xi\)</span></td>
+<td><code>\Xi</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\pi\)</span></td>
+<td><code>\pi</code></td>
+<td><span class="math">\(\Pi\)</span></td>
+<td><code>\Pi</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\kappa\)</span></td>
+<td><code>\kappa</code></td>
+<td><span class="math">\(o\)</span></td>
+<td><code>o</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\varpi\)</span></td>
+<td><code>\varpi</code></td>
+<td><span class="math">\(\tau\)</span></td>
+<td><code>\tau</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\rho\)</span></td>
+<td><code>\rho</code></td>
+<td><span class="math">\(\varrho\)</span></td>
+<td><code>\varrho</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\sigma\)</span></td>
+<td><code>\sigma</code></td>
+<td><span class="math">\(\Sigma\)</span></td>
+<td><code>\Sigma</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\varsigma\)</span></td>
+<td><code>\varsigma</code></td>
+<td><span class="math">\(\Upsilon\)</span></td>
+<td><code>\Upsilon</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\phi\)</span></td>
+<td><code>\phi</code></td>
+<td><span class="math">\(\Phi\)</span></td>
+<td><code>\Phi</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\varphi\)</span></td>
+<td><code>\varphi</code></td>
+<td><span class="math">\(\upsilon\)</span></td>
+<td><code>\upsilon</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\chi\)</span></td>
+<td><code>\chi</code></td>
+<td><span class="math">\(\psi\)</span></td>
+<td><code>\psi</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\omega\)</span></td>
+<td><code>\omega</code></td>
+<td><span class="math">\(\Omega\)</span></td>
+<td><code>\Omega</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\Psi\)</span></td>
+<td><code>\Psi</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>上下标</h2>
+<p>上标：<code>^</code> eg:<code>i^2</code><span class="math">\(i^2\)</span></p>
+<p>下标： <code>_</code> eg:<code>a_{i,j}</code><span class="math">\(a_{i,j}\)</span></p>
+<h2>常用数学公式符号</h2>
+<h3>分数</h3>
+<p><code>\frac{1}{k^2}  \dfrac{1}{k^2} \tfrac{1}{k^2}</code></p>
+<div class="math">$$\frac{1}{k^2} \;\dfrac{1}{k^2} \;\tfrac{1}{k^2}$$</div>
+<h3>开方</h3>
+<p><code>\sqrt[n]{expr}</code> n默认为2</p>
+<p><code>\sqrt{x}\;\sqrt[3]{x+y}\;\sqrt[5]{x^{x^{x^{2}}}}</code></p>
+<div class="math">$$\sqrt{x}\;\sqrt[3]{x+y}\;\sqrt[5]{x^{x^{x^{2}}}}$$</div>
+<h3>其他运算符</h3>
+<p><code>$$\sum\;\prod\;\lim\;\int\;\iiint\;\idotsint\;$$</code></p>
+<div class="math">$$\sum\;\prod\;\lim\;\int\;\iiint\;\idotsint\;$$</div>
+<p><code>+ - * / 可以直接输入，特殊运算符如下</code></p>
+<p><code>$$ \pm\; \times\; \div\; \cdot\; \cap\; \cup\; \geq\; \leq\; \neq\; \approx\; \equiv $$</code></p>
+<div class="math">$$ \pm\; \times\; \div\; \cdot\; \cap\; \cup\; \geq\; \leq\; \neq\; \approx\; \equiv $$</div>
+<p><code>x\to0</code> <span class="math">\(x\to0\)</span></p>
+<h2>箭头表示</h2>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>syntax</th>
+<th>symbol</th>
+<th>syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math">\(\leftarrow\)</span></td>
+<td><code>\leftarrow</code></td>
+<td><span class="math">\(\rightarrow\)</span></td>
+<td><code>\rightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\Leftarrow\)</span></td>
+<td><code>\Leftarrow</code></td>
+<td><span class="math">\(\Rightarrow\)</span></td>
+<td><code>\Rightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\longleftarrow\)</span></td>
+<td><code>\longleftarrow</code></td>
+<td><span class="math">\(\longrightarrow\)</span></td>
+<td><code>\longrightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\Longleftarrow\)</span></td>
+<td><code>\Longleftarrow</code></td>
+<td><span class="math">\(\Longrightarrow\)</span></td>
+<td><code>\Longrightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\leftrightarrow\)</span></td>
+<td><code>\leftrightarrow</code></td>
+<td><span class="math">\(\Leftrightarrow\)</span></td>
+<td><code>\Leftrightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\longleftrightarrow\)</span></td>
+<td><code>\longleftrightarrow</code></td>
+<td><span class="math">\(\Longleftrightarrow\)</span></td>
+<td><code>\Longleftrightarrow</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\xleftarrow{x+y}\)</span></td>
+<td><code>\xleftarrow{x+y}</code></td>
+<td><span class="math">\(\xrightarrow[i^2]{x+y+z}\)</span></td>
+<td><code>\xrightarrow[i^2]{x+y+z}</code></td>
+</tr>
+</tbody>
+</table>
+<h2>省略号</h2>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math">\(\dots\)</span></td>
+<td><code>\dots</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\cdots\)</span></td>
+<td><code>\cdots</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\vdots\)</span></td>
+<td><code>\vdots</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\ddots\)</span></td>
+<td><code>\ddots</code></td>
+</tr>
+</tbody>
+</table>
+<h2>空白间距</h2>
+<p><code>\, 3/18em   \:  4/18em  \; 5/18em \quad 1em \qquad 2m \! -3/18em</code></p>
+<h2>表示方法</h2>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>syntax</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向量</td>
+<td><code>\vec{}</code></td>
+<td><span class="math">\(\vec{AB}\)</span></td>
+</tr>
+<tr>
+<td>强制上下限在上下两侧</td>
+<td><code>\limits</code></td>
+<td><span class="math">\(\sum\limits_{i=0}^{n}i^2\)</span></td>
+</tr>
+<tr>
+<td>强制上下限在右侧</td>
+<td><code>\nolimits</code></td>
+<td><span class="math">\(\sum\nolimits_{i=0}^{n}i^2\)</span></td>
+</tr>
+<tr>
+<td>上划线</td>
+<td><code>\overline</code></td>
+<td><span class="math">\(\overline{x+y}\)</span></td>
+</tr>
+<tr>
+<td>下划线</td>
+<td><code>\underline</code></td>
+<td><span class="math">\(\underline{x+y}\)</span></td>
+</tr>
+<tr>
+<td>上括弧</td>
+<td><code>\overbrace</code></td>
+<td><span class="math">\(\overbrace{x{\dots}x}^{n个x}\)</span></td>
+</tr>
+<tr>
+<td>下括弧</td>
+<td><code>\underbrace</code></td>
+<td><span class="math">\(\underbrace{x{\dots}x}_{n个x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2>矩阵</h2>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc<span class="nb">}</span>
+x<span class="nb">_</span>1 <span class="nb">&amp;</span> x<span class="nb">_</span>2 <span class="nb">&amp;</span> <span class="k">\dots</span> <span class="k">\\</span>
+x<span class="nb">_</span>3 <span class="nb">&amp;</span> x<span class="nb">_</span> 4<span class="nb">&amp;</span> <span class="k">\dots</span> <span class="k">\\</span>
+<span class="k">\vdots</span> <span class="nb">&amp;</span> <span class="k">\vdots</span> <span class="nb">&amp;</span> <span class="k">\ddots</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span>
+</pre></div>
+
+
+<div class="math">$$\begin{array}{ccc} x_1 &amp; x_2 &amp; \dots \\x_3 &amp; x_ 4&amp; \dots \\\vdots &amp; \vdots &amp; \ddots\end{array}$$</div>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span> a <span class="nb">&amp;</span> b<span class="k">\\</span> c <span class="nb">&amp;</span> d <span class="k">\\</span> <span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span> <span class="k">\quad</span>
+<span class="k">\begin</span><span class="nb">{</span>bmatrix<span class="nb">}</span> a <span class="nb">&amp;</span> b <span class="k">\\</span> c <span class="nb">&amp;</span> d <span class="k">\\</span> <span class="k">\end</span><span class="nb">{</span>bmatrix<span class="nb">}</span><span class="k">\quad</span>
+<span class="k">\begin</span><span class="nb">{</span>Bmatrix<span class="nb">}</span> a <span class="nb">&amp;</span> b <span class="k">\\</span> c <span class="nb">&amp;</span> d<span class="k">\\</span> <span class="k">\end</span><span class="nb">{</span>Bmatrix<span class="nb">}</span><span class="k">\quad</span>
+<span class="k">\begin</span><span class="nb">{</span>vmatrix<span class="nb">}</span> a <span class="nb">&amp;</span> b <span class="k">\\</span> c <span class="nb">&amp;</span> d <span class="k">\\</span> <span class="k">\end</span><span class="nb">{</span>vmatrix<span class="nb">}</span><span class="k">\quad</span>
+<span class="k">\begin</span><span class="nb">{</span>Vmatrix<span class="nb">}</span> a <span class="nb">&amp;</span> b<span class="k">\\</span> c <span class="nb">&amp;</span> d <span class="k">\\</span> <span class="k">\end</span><span class="nb">{</span>Vmatrix<span class="nb">}</span>
+</pre></div>
+
+
+<div class="math">$$\begin{Vmatrix} a &amp; b\\ c &amp; d \\ \end{Vmatrix} \quad\begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix}\quad \begin{Bmatrix} a &amp; b \\ c &amp; d\\ \end{Bmatrix}\quad \begin{vmatrix} a &amp; b \\ c &amp; d \\ \end{vmatrix}\quad\begin{Vmatrix} a &amp; b\\ c &amp; d \\ \end{Vmatrix} $$</div>
+<p><code>$ (\begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix}) $</code></p>
+<p>small matrix $ (</p>
+<div class="math">\begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix}</div>
+<p>) $</p>
+<h2>公式组和长公式</h2>
+<ul>
+<li>长公式无需 对齐使用<code>multline</code>需要对齐使用<code>split</code>使用<code>\\和&amp;</code>来分行和对齐</li>
+</ul>
+<p>不对齐<code>$$\begin{multline}x=a+b+c \\ d+e+f+g \end{multline} $$</code></p>
+<div class="math">$$\begin{multline}x=a+b+c \\ d+e+f+g \end{multline} $$</div>
+<p>对齐<code>$$\begin{split}x=&amp;a+b+c \\ &amp;d+e+f+g \end{split} $$</code></p>
+<div class="math">$$\begin{split}x=&amp;a+b+c \\ &amp;d+e+f+g \end{split} $$</div>
+<ul>
+<li>
+<p>公式组不需要对齐使用<code>gather</code>需要对齐使用<code>align</code></p>
+<p>不对齐<code>$$\begin{gather}a=b+c+d\\x=y+z \end{gather}$$</code></p>
+<p>
+<div class="math">$$\begin{gather}a=b+c+d\\x=y+z \end{gather}$$</div>
+</p>
+<p>对齐<code>$$\begin{align}&amp;a=b+c+d\\&amp;x=y+z \end{align}$$</code></p>
+<p>
+<div class="math">$$\begin{align}&amp;a=b+c+d\\&amp;x=y+z \end{align}$$</div>
+</p>
+</li>
+<li>
+<p>分支公式使用<code>cases</code></p>
+<p><code>$$y=\begin{cases}-x,\;x\leq 0\\ x,\; x\gt 0\end{cases}$$</code></p>
+<p>
+<div class="math">$$y=\begin{cases}-x,\;&amp;x\leq 0\\ x,\; &amp;x\gt 0\end{cases}$$</div>
+</p>
+</li>
+</ul>
+<h2>集合</h2>
+<p><code>\{|...\}</code> <span class="math">\(\{|...\}\)</span></p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math">\(\in\)</span></td>
+<td><code>\in</code></td>
+</tr>
+<tr>
+<td><span class="math">\({\not \in}\)</span></td>
+<td><code>{\not \in}</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\subset}B\)</span></td>
+<td><code>A{\subset}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\not \subset}B\)</span></td>
+<td><code>A{\not \subset}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\subsetneqq}B\)</span></td>
+<td><code>A{\subseteqq}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\supsetneqq}B\)</span></td>
+<td><code>A{\supseteqq}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\cap}B\)</span></td>
+<td><code>A{\cap}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\(A{\cup}B\)</span></td>
+<td><code>A{\cup}B</code></td>
+</tr>
+<tr>
+<td><span class="math">\({\overline{A}}\)</span></td>
+<td><code>{\overline{A}}</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\emptyset\)</span></td>
+<td><code>\emptyset</code></td>
+</tr>
+<tr>
+<td><span class="math">\(\mathbb{R}\)</span></td>
+<td><code>\mathbb{R}</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Reference</h3>
+<p><a href="https://www.cnblogs.com/peaceWang/p/Markdown-tian-jia-Latex-shu-xue-gong-shi.html">Markdown 添加 Latex 数学公式</a> 
+<a href="https://blog.csdn.net/u014630987/article/details/70156489">Markdown中Latex 数学公式基本语法</a></p>
+<h4>personal information</h4>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Blog: <a href="https://byuegv.github.io" title="byuegv's blog">github-blog</a></li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; byuegv</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

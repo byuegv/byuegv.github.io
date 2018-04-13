@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>byuegv's blog</title>
+	<meta name="description" content="">
+	<meta name="author" content="byuegv">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="https://byuegv.github.io/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="https://byuegv.github.io/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/local.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+	<link href="https://byuegv.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="byuegv's blog Atom Feed" />
+
+
+	<link href="https://byuegv.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="byuegv's blog RSS Feed" />
+
+
+<script>var _gaq=[['_setAccount','UA-116910702-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</head>
+<body>
+<a href="https://github.com/byuegv"><img style="position: absolute; top: 39px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="https://byuegv.github.io/">byuegv's blog</a>
+			<ul class="nav">
+					<li ><a href="https://byuegv.github.io/category/bash.html">Bash</a></li>
+					<li class="active"><a href="https://byuegv.github.io/category/configure.html">Configure</a></li>
+					<li ><a href="https://byuegv.github.io/category/markdown.html">Markdown</a></li>
+					<li ><a href="https://byuegv.github.io/category/python.html">Python</a></li>
+			</ul>
+			<p class="pull-right"><a href="https://byuegv.github.io/archives.html">[archives]</a> <a href="https://byuegv.github.io/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="https://github.com/byuegv">github</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>zsh install & configure</h1></div>
+		<div class="well small">Permalink: <a class="more" href="https://byuegv.github.io/zsh-1.html">2018-04-06 12:00:00+08:00</a>
+by <a class="url fn" href="https://byuegv.github.io/author/byuegv.html">byuegv </a>
+ in <a href="https://byuegv.github.io/category/configure.html">Configure</a>
+tags: <a href="https://byuegv.github.io/tag/zsh.html">zsh</a> </div>
+		<div><h1>zsh Install &amp; configure</h1>
+<h2>install zsh</h2>
+<p>利用apt-get快速安装zsh</p>
+<div class="highlight"><pre><span></span>sudo apt-get install zsh zsh-doc
+<span class="c1"># set zsh as default terminal</span>
+chsh -s /bin/zsh
+</pre></div>
+
+
+<h2>install oh-my-zsh</h2>
+<ul>
+<li>clone 
+    <code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</code></li>
+<li>configure
+    <code>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code>
+    <code>source ~/.zshrc</code></li>
+</ul>
+<h2>install zsh plugin incr.zsh</h2>
+<p>incr.zsh 是一个功能强大的命令补全和提示插件
+<strong>在补全或提示候选较多的情况下速度很慢，会出现卡顿</strong></p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/.oh-my-zsh/plugins
+mkdir incr <span class="o">&amp;&amp;</span> <span class="nb">cd</span> incr
+<span class="c1">#download incr.zsh</span>
+wget http://mimosa-pudica.net/src/incr-0.2.zsh
+<span class="c1">#activate incr.zsh</span>
+<span class="nb">source</span> ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+
+<span class="c1"># append source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh into .zshrc</span>
+vim ~/.zshrc
+
+<span class="c1"># append source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh into ~/.zshrc</span>
+</pre></div>
+
+
+<h3>Reference</h3>
+<ul>
+<li>[1:] <a href="https://www.jianshu.com/p/6cb063d860ff">Terminal&amp;zsh&amp;oh-my-zsh配置</a></li>
+<li>[2:] https://zhuanlan.zhihu.com/p/27052046</li>
+</ul>
+<h4>personal information</h4>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Blog: <a href="https://byuegv.github.io" title="byuegv's blog">github-blog</a></li>
+</ul></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; byuegv</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

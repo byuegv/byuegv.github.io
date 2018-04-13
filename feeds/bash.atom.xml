@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>byuegv's blog - Bash</title><link href="https://byuegv.github.io/" rel="alternate"></link><link href="https://byuegv.github.io/feeds/bash.atom.xml" rel="self"></link><id>https://byuegv.github.io/</id><updated>2018-04-11T13:20:00+08:00</updated><entry><title>常用bash命令 - 2</title><link href="https://byuegv.github.io/bashCmd-2.html" rel="alternate"></link><published>2018-04-11T12:53:00+08:00</published><updated>2018-04-11T13:20:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-04-11:/bashCmd-2.html</id><summary type="html">&lt;p&gt;cat,sort,uniq,cut 文本处理命令使用简介&lt;/p&gt;</summary><content type="html">&lt;h1&gt;常用bash命令 - 2&lt;/h1&gt;
+&lt;h2&gt;cat&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cat -n 显示行号
+cat -s 不显示重复的换行
+cat -A 显示行尾为&lt;code&gt;$&lt;/code&gt;，Tab 为&lt;code&gt;^I&lt;/code&gt;等&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;sort&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sort -b 从第一个非空白字符开始排序，默认从行首开始排序
+sort -n 给予字符串数值的排序
+sort -r 反序
+sort -k field1,field2 对从field1到field2之间的字符进行排序
+sort -t 自定义分隔符，默认由空格或制表符分隔    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ls -l /usr/bin &lt;span class="p"&gt;|&lt;/span&gt; sort -nr -k &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; head
+&lt;span class="c1"&gt;#按照第三个域的第5个字符排序&lt;/span&gt;
+&lt;span class="c1"&gt;#指定偏移量&lt;/span&gt;
+ls -al ./ &lt;span class="p"&gt;|&lt;/span&gt; sort -r -k &lt;span class="m"&gt;3&lt;/span&gt;.5 &lt;span class="p"&gt;|&lt;/span&gt; head
+sort -t &lt;span class="s1"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;  --key&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;,1 --key&lt;span class="o"&gt;=&lt;/span&gt;2n example.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;uniq&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;uniq file 删除任意重复行
+uniq -c 输出重复行并计数
+uniq -d 只输出重复行
+uniq -D 只输出不重复的行
+uniq -i 忽略大小写
+uniq -f n 忽略开头的n个字段，字段由空格隔开
+uniq -u 只输出独有的文本行
+uniq -sn 忽略开头的n个字符&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;cut&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;切片和切块&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;personal information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io" title="byuegv's blog"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="bash"></category></entry><entry><title>常用bash命令 - 1</title><link href="https://byuegv.github.io/bashCmd-1.html" rel="alternate"></link><published>2018-03-15T10:53:00+08:00</published><updated>2018-04-05T23:00:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-03-15:/bashCmd-1.html</id><summary type="html">&lt;p&gt;文件链接，权限位和权限修改...&lt;/p&gt;</summary><content type="html">&lt;h1&gt;常用bash命令-1&lt;/h1&gt;
+&lt;p&gt;[TOC]
+&lt;strong&gt;Note:bash cmd支持的通配符位* [] ?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ln 链接文件或目录 &lt;br&gt;
+    &amp;gt; 硬链接：引用文件在文件系统中的物理索引(inode)，移动或删除原文件硬链接不会被破坏，当 
+    &amp;gt; 对文件的索引都被删除，即硬链接数为0时文件被删除。只能用于同种文件系统。&lt;br&gt;
+    &amp;gt; 软链接：符号链接，删除软链接不会删除文件本身。可以用于不同的文件系统。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ln -s src dit &lt;span class="c1"&gt;#创建一个软链接&lt;/span&gt;
+ln src dit &lt;span class="c1"&gt;#创建一个硬链接&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;chown 修改权限     &lt;br&gt;
+    &amp;gt; u:user g:group o:other a:all 
+    &amp;gt; +:add -:unset r:4 w:2 x:1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;chown chgrp 修改文件所有者和用户组    &lt;br&gt;
+    &amp;gt; chown [option] [owner]:[group] file..
+    &amp;gt; chgrp [option] group file..&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;setuid setgid 设置用户和权限位     &lt;br&gt;
+    &amp;gt; 设置了权限位则运行任何人以文件所属用户或用户组的权限执行改文件 &lt;br&gt;
+    &amp;gt; chown u+s file or chown 4744 file or chown 2755 file or chown 0733 file &lt;br&gt;
+    &amp;gt; 进行设置或取消权限位      &lt;br&gt;
+    &amp;gt; &lt;code&gt;stat file&lt;/code&gt; 查看文件信息        &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;personal information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io" title="byuegv's blog"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="bash"></category></entry></feed>

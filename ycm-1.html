@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>byuegv's blog</title>
+	<meta name="description" content="">
+	<meta name="author" content="byuegv">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="https://byuegv.github.io/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="https://byuegv.github.io/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/local.css" rel="stylesheet">
+	<link href="https://byuegv.github.io/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+	<link href="https://byuegv.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="byuegv's blog Atom Feed" />
+
+
+	<link href="https://byuegv.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="byuegv's blog RSS Feed" />
+
+
+<script>var _gaq=[['_setAccount','UA-116910702-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</head>
+<body>
+<a href="https://github.com/byuegv"><img style="position: absolute; top: 39px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="https://byuegv.github.io/">byuegv's blog</a>
+			<ul class="nav">
+					<li ><a href="https://byuegv.github.io/category/bash.html">Bash</a></li>
+					<li class="active"><a href="https://byuegv.github.io/category/configure.html">Configure</a></li>
+					<li ><a href="https://byuegv.github.io/category/markdown.html">Markdown</a></li>
+					<li ><a href="https://byuegv.github.io/category/python.html">Python</a></li>
+			</ul>
+			<p class="pull-right"><a href="https://byuegv.github.io/archives.html">[archives]</a> <a href="https://byuegv.github.io/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="https://github.com/byuegv">github</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>ycm Install</h1></div>
+		<div class="well small">Permalink: <a class="more" href="https://byuegv.github.io/ycm-1.html">2018-04-06 13:00:00+08:00</a>
+by <a class="url fn" href="https://byuegv.github.io/author/byuegv.html">byuegv </a>
+ in <a href="https://byuegv.github.io/category/configure.html">Configure</a>
+tags: <a href="https://byuegv.github.io/tag/ycm.html">ycm</a> </div>
+		<div><h1>vim8.0 Install YCM(YouCompleteMe) - Deepin Linux</h1>
+<h2>1. 从github仓库clone YCM源码</h2>
+<p>通常使用Vundle直接安装YCM会出现缺少Python module 如future的情况
+因此这里使用源码编译安装YCM</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/.vim/bundle
+git clone --recursive https://github.com/Valloric/YouCompleteMe.git
+
+<span class="c1"># change direction to ~/.vim/bundle/Youcomplete</span>
+<span class="nb">cd</span> ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+<span class="c1"># 下载完成大概有 230+M</span>
+</pre></div>
+
+
+<h2>2. 安装编译YCM需要的组件</h2>
+<p>为了支持C家族的补全，我们需要使用clang3.9+等从本地编译YCM源码</p>
+<div class="highlight"><pre><span></span>sudo apt-get install llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
+<span class="c1"># cmake python3-dev 必需</span>
+sudo apt-get cmake python3-dev python-dev
+</pre></div>
+
+
+<h2>3. 开始本地编译YCM</h2>
+<div class="highlight"><pre><span></span><span class="c1">#新建文件夹用于存放编译好的文件</span>
+mkdir ~/.ycm_build
+<span class="nb">cd</span> ~/.ycm_build
+<span class="c1">#指定libclang版本生成makefile文件</span>
+cmake -G <span class="s2">&quot;Unix Makefiles&quot;</span> -DUSE_SYSTEM_BOOST<span class="o">=</span>ON -DEXTERNAL_LIBCLANG_PATH<span class="o">=</span>/usr/lib/x86_64-linux-gnu/libclang-3.9.so . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+
+<span class="c1">#构建核心库</span>
+cmake --build . --target ycm_core
+
+<span class="c1">#配置.ycm_extra_conf.py</span>
+cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim/
+
+<span class="c1"># 修改.vimrc配置文件</span>
+vim ～/.vimrc
+<span class="nb">let</span> g:ycm_server_python_interpreter<span class="o">=</span><span class="s1">&#39;/usr/bin/python&#39;</span>
+<span class="nb">let</span> g:ycm_global_ycm_extra_conf<span class="o">=</span><span class="s1">&#39;~/.vim/.ycm_extra_conf.py&#39;</span>
+</pre></div>
+
+
+<p><img alt="生成makefile" src="images/ycmInstall1.png">
+<img alt="cmake构建核心库" src="images/ycmInstall2.png"></p>
+<h2>4. 测试安装结果</h2>
+<p>建立hello.c文件,测试配置结果。</p>
+<p><img alt="测试结果" src="images/ycmInstall3.png"></p>
+<h2>5. 迁移配置结果到root用户</h2>
+<p>使用软连接将用户的配置迁移到root用户
+反之也可实现将root的配置迁移到某一用户</p>
+<div class="highlight"><pre><span></span>ln -s /home/sl/.vim  /root/.vim
+ln -s /home/sl/.vimrc /root/.vimrc
+</pre></div>
+
+
+<h3>Reference</h3>
+<p>[1:] https://www.jianshu.com/p/d908ce81017a?nomobile=yes</p>
+<h4>Personal Information</h4>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#98;&#121;&#117;&#101;&#103;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Blog: <a href="https://byuegv.github.io">github-blog</a></li>
+</ul></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; byuegv</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

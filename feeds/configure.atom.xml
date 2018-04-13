@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>byuegv's blog - Configure</title><link href="https://byuegv.github.io/" rel="alternate"></link><link href="https://byuegv.github.io/feeds/configure.atom.xml" rel="self"></link><id>https://byuegv.github.io/</id><updated>2018-04-06T13:30:00+08:00</updated><entry><title>ycm Install</title><link href="https://byuegv.github.io/ycm-1.html" rel="alternate"></link><published>2018-04-06T13:00:00+08:00</published><updated>2018-04-06T13:30:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-04-06:/ycm-1.html</id><summary type="html">&lt;p&gt;vim8.0配置著名插件YCM(YouCompleteMe),linux deepin&lt;/p&gt;</summary><content type="html">&lt;h1&gt;vim8.0 Install YCM(YouCompleteMe) - Deepin Linux&lt;/h1&gt;
+&lt;h2&gt;1. 从github仓库clone YCM源码&lt;/h2&gt;
+&lt;p&gt;通常使用Vundle直接安装YCM会出现缺少Python module 如future的情况
+因此这里使用源码编译安装YCM&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.vim/bundle
+git clone --recursive https://github.com/Valloric/YouCompleteMe.git
+
+&lt;span class="c1"&gt;# change direction to ~/.vim/bundle/Youcomplete&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+&lt;span class="c1"&gt;# 下载完成大概有 230+M&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;2. 安装编译YCM需要的组件&lt;/h2&gt;
+&lt;p&gt;为了支持C家族的补全，我们需要使用clang3.9+等从本地编译YCM源码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
+&lt;span class="c1"&gt;# cmake python3-dev 必需&lt;/span&gt;
+sudo apt-get cmake python3-dev python-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;3. 开始本地编译YCM&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#新建文件夹用于存放编译好的文件&lt;/span&gt;
+mkdir ~/.ycm_build
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.ycm_build
+&lt;span class="c1"&gt;#指定libclang版本生成makefile文件&lt;/span&gt;
+cmake -G &lt;span class="s2"&gt;&amp;quot;Unix Makefiles&amp;quot;&lt;/span&gt; -DUSE_SYSTEM_BOOST&lt;span class="o"&gt;=&lt;/span&gt;ON -DEXTERNAL_LIBCLANG_PATH&lt;span class="o"&gt;=&lt;/span&gt;/usr/lib/x86_64-linux-gnu/libclang-3.9.so . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+
+&lt;span class="c1"&gt;#构建核心库&lt;/span&gt;
+cmake --build . --target ycm_core
+
+&lt;span class="c1"&gt;#配置.ycm_extra_conf.py&lt;/span&gt;
+cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim/
+
+&lt;span class="c1"&gt;# 修改.vimrc配置文件&lt;/span&gt;
+vim ～/.vimrc
+&lt;span class="nb"&gt;let&lt;/span&gt; g:ycm_server_python_interpreter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/usr/bin/python&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;let&lt;/span&gt; g:ycm_global_ycm_extra_conf&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;~/.vim/.ycm_extra_conf.py&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="生成makefile" src="images/ycmInstall1.png"&gt;
+&lt;img alt="cmake构建核心库" src="images/ycmInstall2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;4. 测试安装结果&lt;/h2&gt;
+&lt;p&gt;建立hello.c文件,测试配置结果。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="测试结果" src="images/ycmInstall3.png"&gt;&lt;/p&gt;
+&lt;h2&gt;5. 迁移配置结果到root用户&lt;/h2&gt;
+&lt;p&gt;使用软连接将用户的配置迁移到root用户
+反之也可实现将root的配置迁移到某一用户&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ln -s /home/sl/.vim  /root/.vim
+ln -s /home/sl/.vimrc /root/.vimrc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Reference&lt;/h3&gt;
+&lt;p&gt;[1:] https://www.jianshu.com/p/d908ce81017a?nomobile=yes&lt;/p&gt;
+&lt;h4&gt;Personal Information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="ycm"></category></entry><entry><title>搭建自己的Git服务器</title><link href="https://byuegv.github.io/git-1.html" rel="alternate"></link><published>2018-04-06T12:00:00+08:00</published><updated>2018-04-06T12:00:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-04-06:/git-1.html</id><summary type="html">&lt;p&gt;Git Server 的简单搭建过程记录&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Git Server 搭建&lt;/h1&gt;
+&lt;h2&gt;create user group repo&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;goupadd git
+useradd git -g git
+
+
+&lt;span class="c1"&gt;# config ssh key&lt;/span&gt;
+mkdir /home/git
+&lt;span class="nb"&gt;cd&lt;/span&gt; /home/git/
+mkdir .ssh
+cat id_rsa.pub &amp;gt;&amp;gt; /home/git/.ssh/authorized_keys
+
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~
+mkdir repo
+&lt;span class="c1"&gt;# end with .git will be see as repo&lt;/span&gt;
+git init --bare coding.git
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ..
+chown -R git:git repo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;git clone remote repo&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/workplace
+
+&lt;span class="c1"&gt;# git global config&lt;/span&gt;
+git config --global user.email &lt;span class="s2"&gt;&amp;quot;user@example.com&amp;quot;&lt;/span&gt;
+git config --global user.name  &lt;span class="s2"&gt;&amp;quot;username&amp;quot;&lt;/span&gt;
+
+git clone git@server:/home/git/repo/coding.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;personal information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io" title="byuegv's blog"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="git"></category></entry><entry><title>zsh install &amp; configure</title><link href="https://byuegv.github.io/zsh-1.html" rel="alternate"></link><published>2018-04-06T12:00:00+08:00</published><updated>2018-04-06T12:30:00+08:00</updated><author><name>byuegv</name></author><id>tag:byuegv.github.io,2018-04-06:/zsh-1.html</id><summary type="html">&lt;p&gt;zsh Install and Configure 以及 oh-my-zsh 安装配置&lt;/p&gt;</summary><content type="html">&lt;h1&gt;zsh Install &amp;amp; configure&lt;/h1&gt;
+&lt;h2&gt;install zsh&lt;/h2&gt;
+&lt;p&gt;利用apt-get快速安装zsh&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install zsh zsh-doc
+&lt;span class="c1"&gt;# set zsh as default terminal&lt;/span&gt;
+chsh -s /bin/zsh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;install oh-my-zsh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;clone 
+    &lt;code&gt;git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;configure
+    &lt;code&gt;cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc&lt;/code&gt;
+    &lt;code&gt;source ~/.zshrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;install zsh plugin incr.zsh&lt;/h2&gt;
+&lt;p&gt;incr.zsh 是一个功能强大的命令补全和提示插件
+&lt;strong&gt;在补全或提示候选较多的情况下速度很慢，会出现卡顿&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.oh-my-zsh/plugins
+mkdir incr &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; incr
+&lt;span class="c1"&gt;#download incr.zsh&lt;/span&gt;
+wget http://mimosa-pudica.net/src/incr-0.2.zsh
+&lt;span class="c1"&gt;#activate incr.zsh&lt;/span&gt;
+&lt;span class="nb"&gt;source&lt;/span&gt; ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+
+&lt;span class="c1"&gt;# append source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh into .zshrc&lt;/span&gt;
+vim ~/.zshrc
+
+&lt;span class="c1"&gt;# append source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh into ~/.zshrc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[1:] &lt;a href="https://www.jianshu.com/p/6cb063d860ff"&gt;Terminal&amp;amp;zsh&amp;amp;oh-my-zsh配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[2:] https://zhuanlan.zhihu.com/p/27052046&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;personal information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#98;&amp;#121;&amp;#117;&amp;#101;&amp;#103;&amp;#118;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://byuegv.github.io" title="byuegv's blog"&gt;github-blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="zsh"></category></entry></feed>
